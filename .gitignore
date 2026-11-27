@@ -4,3 +4,4 @@ bin/
 *.safeusb
 *.partial-*
 __pycache__/
+dist/
