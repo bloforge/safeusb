@@ -17,7 +17,6 @@
           version = "0.1.0";
           src = ./.;
           cargoLock.lockFile = ./Cargo.lock;
-          nativeBuildInputs = [ pkgs.pkg-config ];
           meta = {
             description = "Cross-platform disk backup, restore, and USB flashing tool";
             homepage = "https://github.com/bloforge/safeusb";
