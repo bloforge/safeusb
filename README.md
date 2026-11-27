@@ -116,6 +116,13 @@ safeusb sum ./ubuntu.iso --check <expected hex>
 - Raw disk access needs administrator rights on Windows and root on Linux.
 - Check the device path from `list-devices` before you confirm. A wrong path means the wrong disk is overwritten.
 
+## Documentation
+
+- [Architecture](docs/architecture.md): how the modules fit together
+- [Archive format](docs/archive-format.md): the on-disk layout of `.safeusb` files
+- [Changelog](CHANGELOG.md)
+- [Examples](examples/): library usage
+
 ## Archive Format
 
 An archive is a single file with four parts, in order:
@@ -136,6 +143,8 @@ cargo clippy --all-targets
 ```
 
 ## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Release builds: `scripts/build-release.ps1` on Windows, `scripts/build-release.sh` on Linux.
 
 Bug reports and feature requests are welcome. Open an issue before starting a large change. Keep pull requests focused, and include tests where they make sense.
 
