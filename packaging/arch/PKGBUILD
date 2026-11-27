@@ -8,7 +8,7 @@ license=('GPL-3.0-or-later')
 depends=('gcc-libs')
 makedepends=('cargo')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('83a8026c22670f777b77d4cd01cba791f31a2873bace514417ecbab31f8fc507')
 
 prepare() {
     cd "$pkgname-$pkgver"
