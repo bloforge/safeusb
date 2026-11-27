@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" viewBox="0 0 640 200">
+  <rect width="640" height="200" rx="28" fill="#0d1117"/>
+  <rect x="48" y="62" width="104" height="76" rx="10" fill="none" stroke="#f0883e" stroke-width="6"/>
+  <rect x="62" y="78" width="16" height="44" rx="3" fill="#f0883e"/>
+  <rect x="86" y="78" width="16" height="44" rx="3" fill="#f0883e"/>
+  <rect x="152" y="62" width="0" height="0"/>
+  <text x="188" y="118" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#e6edf3">SafeUSB</text>
+  <text x="190" y="152" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#8b949e">safe backup, restore and flashing</text>
+</svg>

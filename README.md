@@ -1,10 +1,37 @@
-# SafeUSB
+<p align="center">
+  <img src="assets/logo.svg" alt="SafeUSB" width="560">
+</p>
 
-A cross-platform disk backup, restore, and USB flashing tool written in Rust.
+<p align="center">
+  <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue"></a>
+  <img alt="Rust" src="https://img.shields.io/badge/rust-stable-orange">
+  <img alt="Platforms" src="https://img.shields.io/badge/platforms-windows%20%7C%20linux-lightgrey">
+  <img alt="Status" src="https://img.shields.io/badge/status-early-yellow">
+</p>
+
+<p align="center">
+  <b>Cross-platform disk backup, restore, and USB flashing, written in Rust.</b>
+</p>
 
 SafeUSB writes ISO and disk images to USB drives, reads the drive back to verify the write, and backs up disks into compressed, checksummed archives. It runs on Windows and Linux.
 
 > **Status:** early. The archive format and the flash path are tested. Real-hardware testing is limited, so try it on a spare drive first.
+
+## Demo
+
+Flashing a 512 MiB image to a USB drive, then verifying it (sample output):
+
+```
+$ safeusb flash ubuntu.iso \.\PhysicalDrive1
+flash target:
+  image:       ubuntu.iso (Raw)
+  path:        \.\PhysicalDrive1
+  size:        29.3 GiB (31457280000 bytes)
+  description: Generic Flash Disk (PhysicalDrive1)
+everything on the target will be overwritten, type the path exactly to confirm:
+> \.\PhysicalDrive1
+flash done: 512.0 MiB written | sha256 c457d02b83f0acd53fe1a6dd63c422381c6939e8fe5908202eb91738fbf7ee4b | verified yes
+```
 
 ## Features
 
