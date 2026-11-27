@@ -7,7 +7,7 @@ SafeUSB is one Rust crate with a library (`src/lib.rs`) and a command-line binar
 | Module | Purpose |
 |---|---|
 | `disk` | Lists disks and checks targets. Has one backend per OS: `linux.rs` (sysfs) and `windows.rs` (PowerShell `Get-Disk`, Win32 volume locking). |
-| `img` | Backup and restore of `.safeusb` archives. `wire.rs` holds the on-disk byte layout. See [archive-format.md](archive-format.md). |
+| `img` | Backup and restore of `.safeusb` archives. `wire.rs` holds the on-disk byte layout. See [archive_format.md](archive_format.md). |
 | `input` | Detects and opens images. Recognizes raw, ISO 9660, gzip, xz, and zstd input, and streams compressed input without unpacking it to disk. |
 | `flash` | Writes a stream to a target and reads it back. Source reads and target writes run on separate threads. |
 | `hashing` | SHA-256 and BLAKE3 for files, with check mode. |

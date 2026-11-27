@@ -3,6 +3,11 @@ name = "safeusb"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-3.0-or-later"
+description = "Cross-platform disk backup, restore, and USB flashing tool"
+repository = "https://github.com/bloforge/safeusb"
+readme = "README.md"
+keywords = ["usb", "disk", "backup", "flash", "iso"]
+categories = ["command-line-utilities", "filesystem"]
 
 [dependencies]
 anyhow = "1"

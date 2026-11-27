@@ -116,10 +116,25 @@ safeusb sum ./ubuntu.iso --check <expected hex>
 - Raw disk access needs administrator rights on Windows and root on Linux.
 - Check the device path from `list-devices` before you confirm. A wrong path means the wrong disk is overwritten.
 
+## Repository Layout
+
+| Path | Contents |
+|---|---|
+| `src/` | The library and the `safeusb` command-line program (Rust) |
+| `tests/` | Integration tests (Rust) |
+| `examples/` | Library usage examples (Rust) |
+| `docs/` | Architecture notes and the archive format |
+| `scripts/` | Release build scripts (PowerShell and shell) |
+| `packaging/` | Arch package build file (`PKGBUILD`) and Scoop manifest (JSON) |
+| `tools/` | Helper scripts for test data (Python) |
+| `bench/` | Flash timing script (Python) |
+| `assets/` | Logo |
+| `.github/` | CI workflow (YAML) and issue and pull request templates |
+
 ## Documentation
 
 - [Architecture](docs/architecture.md): how the modules fit together
-- [Archive format](docs/archive-format.md): the on-disk layout of `.safeusb` files
+- [Archive format](docs/archive_format.md): the on-disk layout of `.safeusb` files
 - [Changelog](CHANGELOG.md)
 - [Examples](examples/): library usage
 
@@ -144,7 +159,7 @@ cargo clippy --all-targets
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Release builds: `scripts/build-release.ps1` on Windows, `scripts/build-release.sh` on Linux.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Release builds: `scripts/build_release.ps1` on Windows, `scripts/build_release.sh` on Linux. An Arch package build file is in `packaging/arch/`.
 
 Bug reports and feature requests are welcome. Open an issue before starting a large change. Keep pull requests focused, and include tests where they make sense.
 

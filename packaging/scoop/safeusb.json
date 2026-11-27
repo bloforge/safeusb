@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "description": "Cross-platform disk backup, restore, and USB flashing tool",
+    "homepage": "https://github.com/bloforge/safeusb",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bloforge/safeusb/releases/download/v0.1.0/safeusb-windows-x64.zip",
+            "hash": "replace-with-sha256-of-release-zip"
+        }
+    },
+    "bin": "safeusb.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bloforge/safeusb/releases/download/v$version/safeusb-windows-x64.zip"
+            }
+        }
+    }
+}
