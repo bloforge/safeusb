@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeUSB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>SafeUSB</h1>
+    <p class="tagline">Cross-platform disk backup, restore, and USB flashing, written in Rust.</p>
+    <nav>
+      <a href="https://github.com/bloforge/safeusb">Source</a>
+      <a href="https://github.com/bloforge/safeusb/releases">Releases</a>
+      <a href="https://github.com/bloforge/safeusb/blob/main/docs/archive_format.md">Archive format</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Check an image</h2>
+      <p>Pick an ISO or image file and paste the SHA-256 published by its source. The file is read and hashed in this browser. Nothing is uploaded.</p>
+      <form id="check-form">
+        <label for="file">Image file</label>
+        <input id="file" type="file" required>
+        <label for="expected">Expected SHA-256</label>
+        <input id="expected" type="text" placeholder="64 hex characters" spellcheck="false" autocomplete="off" required>
+        <button type="submit">Check</button>
+      </form>
+      <p id="progress" class="muted"></p>
+      <p id="result" class="result" role="status"></p>
+    </section>
+
+    <section>
+      <h2>Why SafeUSB</h2>
+      <ul>
+        <li>Flashes ISO and disk images, including <code>.gz</code>, <code>.xz</code>, and <code>.zst</code>.</li>
+        <li>Reads every write back and checks it against the source.</li>
+        <li>Refuses the system disk and asks you to type the target path before writing.</li>
+        <li>Runs on Windows and Linux.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Install</h2>
+      <pre><code>cargo build --release
+./target/release/safeusb list-devices</code></pre>
+      <p>Windows zip and checksums are on the <a href="https://github.com/bloforge/safeusb/releases">releases page</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>GPL-3.0-or-later</p>
+  </footer>
+
+  <script src="check.js"></script>
+</body>
+</html>

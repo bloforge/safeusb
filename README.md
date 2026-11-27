@@ -51,6 +51,8 @@ You need a stable Rust toolchain.
 cargo build --release
 ```
 
+Or use the Makefile (`make build`), Nix (`nix build`), or Docker (`docker build -f docker/Dockerfile -t safeusb .`).
+
 The binary is written to `target/release/safeusb` (or `safeusb.exe` on Windows).
 
 ## Usage
@@ -130,6 +132,10 @@ safeusb sum ./ubuntu.iso --check <expected hex>
 | `bench/` | Flash timing script (Python) |
 | `assets/` | Logo |
 | `.github/` | CI workflow (YAML) and issue and pull request templates |
+| `site/` | Project page with a browser SHA-256 checker (HTML, CSS, JavaScript) |
+| `docker/` | Dockerfile for a container build of the CLI |
+| `flake.nix` | Nix flake for a reproducible build and dev shell |
+| `Makefile` | Shortcuts for build, test, lint, release, and the site |
 
 ## Documentation
 
