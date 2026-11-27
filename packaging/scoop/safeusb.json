@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/bloforge/safeusb/releases/download/v0.1.0/safeusb-windows-x64.zip",
-            "hash": "replace-with-sha256-of-release-zip"
+            "hash": "0c93edf3c60848765913f668c28be13947b6c33048009f71c8a61729a7c73596"
         }
     },
     "bin": "safeusb.exe",
