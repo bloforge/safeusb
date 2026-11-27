@@ -18,3 +18,19 @@ jobs:
           components: clippy
       - run: cargo test --all-targets
       - run: cargo clippy --all-targets
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f docker/Dockerfile -t safeusb .
+      - run: docker run --rm safeusb --help
+
+  nix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: nix build .#default --print-build-logs
+      - run: ./result/bin/safeusb --help
