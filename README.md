@@ -22,14 +22,14 @@ SafeUSB writes ISO and disk images to USB drives, reads the drive back to verify
 Flashing a 512 MiB image to a USB drive, then verifying it (sample output):
 
 ```
-$ safeusb flash ubuntu.iso \.\PhysicalDrive1
+$ safeusb flash ubuntu.iso \\.\PhysicalDrive1
 flash target:
   image:       ubuntu.iso (Raw)
-  path:        \.\PhysicalDrive1
+  path:        \\.\PhysicalDrive1
   size:        29.3 GiB (31457280000 bytes)
   description: Generic Flash Disk (PhysicalDrive1)
 everything on the target will be overwritten, type the path exactly to confirm:
-> \.\PhysicalDrive1
+> \\.\PhysicalDrive1
 flash done: 512.0 MiB written | sha256 c457d02b83f0acd53fe1a6dd63c422381c6939e8fe5908202eb91738fbf7ee4b | verified yes
 ```
 
